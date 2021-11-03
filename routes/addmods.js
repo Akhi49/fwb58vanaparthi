@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Add Mods' });
+  res.render('addmods', { title: 'Add Mods' });
   let query = req.query 
   console.log(`rows ${query.rows}`) 
   console.log(`cols ${query.cols}`) 
