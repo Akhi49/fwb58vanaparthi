@@ -3,23 +3,23 @@ extends layout
 block content
   div(class="container-fluid")
     h1= title
-  - let results=[{CompanyName :"chevrolet",model :"camaro",price :25,000},{CompanyName :"BMW",model :"Z4",price: "50,000"},{CompanyName :"Porsche",model:"911 Carrera 4",price :108,500}] 
+  - let results=[{CompanyName:"chevrolet",Model:"camaro",cost:25000},{CompanyName:"BMW",Model:"Z4",cost:50000},{CompanyName:"Porsche",Model:"911 Carrera 4",cost:108500}] 
     div(class="row")
       each form,index in results
-        div(class = "col-sm-2 bg-primary" onclick=`buy(${index})`) #{form.CompanyName}
+        div(class = "col-sm-2 bg-success" onclick=`buy(${index})`) #{form.CompanyName}
         br
         br
         br
-        div(class = "col-sm-2 bg-primary" onclick=`buy(${index})`) #{form.model}
+        div(class = "col-sm-2 bg-danger" onclick=`buy(${index})`) #{form.Model}
         br
         br
         br
-        div(class = "col-sm-2 bg-primary" onclick=`buy(${index})`) #{form.price}
+        div(class = "col-sm-2 bg-secondary" onclick=`buy(${index})`) #{form.cost}
     script.
      
       function buy(itemNo)
       {
-        alert(`You purchased car ${itemNo+1}`)
+        alert(`You purchased Item ${itemNo+1}`)
       }
  
 
